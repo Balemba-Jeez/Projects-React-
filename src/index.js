@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import HelloWorld from './components/HelloWorld';
+import ExpenseEntryItem from './components/ExpenseEntryItem';
+import ExpenseEntryItemFunct from './components/ExpenseEntryItemFunct';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    {/* <HelloWorld /> */}
+    {/* <ExpenseEntryItem /> */}
+    <ExpenseEntryItemFunct />
   </React.StrictMode>
 );
 
