@@ -25935,15 +25935,37 @@ var HelloJessy = /*#__PURE__*/function (_React$Component) {
   }]);
 }(_react.default.Component);
 var _default = exports.default = HelloJessy;
+},{"react":"../node_modules/react/index.js"}],"../src/components/mycom.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function MyCom() {
+  var cTime = "The" + "Current  time" + " is" + "".concat(new Date().toTimeString()); //new Date().toDateString();
+  var attr_testVar = "attri_test";
+  //    const getCurrentTime_Fmt = () => {return "The" + "Current  time" + " is" + `${new Date().toDateString()}`}
+  var getCurrentTime_Fmt = function getCurrentTime_Fmt() {
+    return new Date().toTimeString();
+  };
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, " The current time is ", /*#__PURE__*/_react.default.createElement("span", {
+    className: attr_testVar
+  }, "  ", getCurrentTime_Fmt(), "  ")));
+}
+var _default = exports.default = MyCom;
 },{"react":"../node_modules/react/index.js"}],"../src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
 var _reactDom = _interopRequireDefault(require("react-dom"));
 var _HelloWorld = _interopRequireDefault(require("./components/HelloWorld"));
+var _mycom = _interopRequireDefault(require("./components/mycom"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-_reactDom.default.render(/*#__PURE__*/_react.default.createElement(_react.default.StrictMode, null, /*#__PURE__*/_react.default.createElement(_HelloWorld.default, null)), document.getElementById('root'));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/HelloWorld":"../src/components/HelloWorld.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render(/*#__PURE__*/_react.default.createElement(_react.default.StrictMode, null, /*#__PURE__*/_react.default.createElement(_mycom.default, null)), document.getElementById('root'));
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/HelloWorld":"../src/components/HelloWorld.js","./components/mycom":"../src/components/mycom.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -25968,7 +25990,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "4008" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "7239" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
