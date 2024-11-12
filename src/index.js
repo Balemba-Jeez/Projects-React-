@@ -5,15 +5,15 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import HelloWorld from './components/HelloWorld';
 import ExpenseEntryItem from './components/ExpenseEntryItem';
-import ExpenseEntryItemFunct from './components/ExpenseEntryItemFunct';
+// import ExpenseEntryItemFunct from './components/ExpenseEntryItemFunct';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <HelloWorld /> */}
-    {/* <ExpenseEntryItem /> */}
-    <ExpenseEntryItemFunct />
+    <ExpenseEntryItem />
+    {/* <ExpenseEntryItemFunct /> */}
   </React.StrictMode>
 );
 
