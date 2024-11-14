@@ -1,12 +1,25 @@
 import React from "react";
 import './ExpenseEntryItemFunct.css';
+import FormattedMoneyFunc from "./FormattedMoneyFunc";
+import FormattedDateFunc from "./FormattedDateFunc";
 
-function ExpenseEntryItemFunct() {
+
+
+
+function ExpenseEntryItemFunct(props) {
     return (
                 <div>
                     <div><b>Item:</b> <em>Mango Juice</em></div>
-                    <div><b>Amount:</b> <em>30.00</em></div>
-                    <div><b>Spend Date:</b> <em>2020-10-10</em></div>
+                    <div><b>Amount:</b> 
+                    <em>
+                        <FormattedMoneyFunc value = {props.item.amount}/>
+                    </em>
+                    </div>
+                    <div><b>Spend Date:</b> 
+                    <em>
+                        <FormattedDateFunc value = {props.item.spendDate}/>
+                    </em>
+                    </div>
                     <div><b>Catergory:</b> <em>Food</em></div>
                 </div>
     )
